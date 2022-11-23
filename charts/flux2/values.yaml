@@ -20,7 +20,7 @@ clusterDomain: cluster.local
 
 cli:
   image: ghcr.io/fluxcd/flux-cli
-  tag: v0.36.0
+  tag: v0.37.0
   nodeSelector: {}
   affinity: {}
   tolerations: []
@@ -284,3 +284,15 @@ prometheus:
           - sourceLabels: [__meta_kubernetes_pod_phase]
             action: keep
             regex: Running
+sourcecontroller:
+  tag: v0.31.0
+kustomizecontroller:
+  tag: v0.30.0
+helmcontroller:
+  tag: v0.26.0
+notificationcontroller:
+  tag: v0.28.0
+imagereflectorcontroller:
+  tag: v0.22.1
+imageautomationcontroller:
+  tag: v0.26.1
